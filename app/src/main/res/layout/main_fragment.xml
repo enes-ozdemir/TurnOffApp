@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    tools:context=".ui.main.MainFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="Please select services you want to close"
+        android:textColor="@color/white" />
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="5dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_margin="10dp"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        &lt;!&ndash;        <TextView&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_gravity="center"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:text="Turn Off All Switches"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:textColor="@color/white" />&ndash;&gt;-->
+
+
+    <!--        &lt;!&ndash;        <com.github.angads25.toggle.widget.LabeledSwitch&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:id="@+id/swMain"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_gravity="center"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_margin="10dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:colorBorder="@color/blueLight"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:colorOn="@color/blueLight" />&ndash;&gt;-->
+
+    <!--    </LinearLayout>-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/bg_light"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Turn Off Bluetooth"
+                android:textColor="@color/white" />
+
+            <com.github.angads25.toggle.widget.LabeledSwitch
+                android:id="@+id/swBluetooth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                app:colorBorder="@color/blueLight"
+                app:colorOn="@color/blueLight" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Turn Off Wifi"
+                android:textColor="@color/white" />
+
+            <com.github.angads25.toggle.widget.LabeledSwitch
+                android:id="@+id/swWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                app:colorBorder="@color/blueLight"
+                app:colorOn="@color/blueLight" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Turn Off Flash Light"
+                android:textColor="@color/white" />
+
+
+            <com.github.angads25.toggle.widget.LabeledSwitch
+                android:id="@+id/swFlashLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                app:colorBorder="@color/blueLight"
+                app:colorOn="@color/blueLight" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="@color/bg_light"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Turn On Don't Bother Mode"
+            android:textColor="@color/white" />
+
+        <com.github.angads25.toggle.widget.LabeledSwitch
+            android:id="@+id/swNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:colorBorder="@color/blueLight"
+            app:colorOn="@color/blueLight" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="3dp"
+        android:text="Services will be close at selected time"
+        android:textColor="@color/white" />
+
+    <TimePicker
+        android:id="@+id/tpSelectTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:timePickerMode="spinner" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Save">
+
+    </Button>
+
+</LinearLayout>
